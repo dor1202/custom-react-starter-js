@@ -1,6 +1,6 @@
 # Custom React Starter
 
-A simple starter containing the needed folders for organized project.
+A simple starter containing the needed folders for an organized project.
 
 ## Available Scripts
 
