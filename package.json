@@ -1,7 +1,7 @@
 {
   "name": "custom-react-starter-js",
-  "version": "0.2.0",
-  "license" : "MIT",
+  "version": "0.3.0",
+  "license": "MIT",
   "author": "Dor Schreiber <schreiberdor@gmail.com> (https://github.com/dor1202)",
   "repository": {
     "type": "git",
