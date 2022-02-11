@@ -17,7 +17,7 @@ const repoName = process.argv[2];
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/dor1202/custom-react-starter-js ${repoName}`;
 const removeGitCommand = `cd ${repoName} && rm -rf .git`;
 const removeBinCommand = `rm -r ${repoName}/bin`;
-const installDepsCommand = `npm install`;
+const installDepsCommand = `d ${repoName} && npm install`;
 
 console.log(`Cloning the repository with name ${repoName}`);
 
