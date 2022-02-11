@@ -24,10 +24,6 @@ console.log(`Cloning the repository with name ${repoName}`);
 const checkedOut = runCommand(gitCheckoutCommand);
 if(!checkedOut)process.exit(-1);
 
-console.log(`Installing dependencies for ${repoName}`);
-const installedDeps = runCommand(installDepsCommand);
-if(!installedDeps)process.exit(-1);
-
 console.log(`Removing git from ${repoName}`);
 const removeGit = runCommand(removeGitCommand);
 if(!removeGit)process.exit(-1);
@@ -35,5 +31,9 @@ if(!removeGit)process.exit(-1);
 console.log(`Removing bin folder from ${repoName}`);
 const removeBin = runCommand(removeBinCommand);
 if(!removeBin)process.exit(-1);
+
+console.log(`Installing dependencies for ${repoName}`);
+const installedDeps = runCommand(installDepsCommand);
+if(!installedDeps)process.exit(-1);
 
 console.log(`Congrats! You'r ready to start coding`);
