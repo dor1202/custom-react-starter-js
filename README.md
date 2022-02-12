@@ -4,7 +4,7 @@
 
 Provided with i18next starter and axios http client starter.
 
-[TypeScript template](https://link-url-here.org)
+[TypeScript template](https://www.npmjs.com/package/custom-react-starter-ts)
 
 ## Installation
 
