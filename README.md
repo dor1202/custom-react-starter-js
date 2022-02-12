@@ -1,8 +1,10 @@
-# Custom React Starter ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+# Custom React Starter JS![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 :tada:A react starter containing the needed folders for an organized project.:tada:
 
 Provided with i18next starter and axios http client starter.
+
+[TypeScript template](https://link-url-here.org)
 
 ## Installation
 
@@ -13,7 +15,7 @@ Provided with i18next starter and axios http client starter.
 Creating the project with the template.
 
 ## Documentation
-Each folder contains a starter/README file containing an explanation for the folder purpose.:smiley:
+Each folder contains a starter/README file containing an explanation for the folder purpose:smiley:
 
 ## Contributing
 The main purpose of this repository is to simplify react project initialization to contain the needed folder tree and wasting less time when starting a new project.

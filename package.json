@@ -7,6 +7,17 @@
     "type": "git",
     "url": "https://github.com/dor1202/custom-react-starter-js"
   },
+  "keywords": [
+    "react",
+    "react-template",
+    "starter",
+    "axios",
+    "i18next"
+  ],
+  "bugs": {
+    "url": "https://github.com/dor1202/custom-react-starter-js/issues"
+  },
+  "homepage": "https://github.com/dor1202/custom-react-starter-js#readme",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
