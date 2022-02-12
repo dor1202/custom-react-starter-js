@@ -1,8 +1,20 @@
 import React from 'react'
 import { Logo } from '../../../../SVGs/SvgImports';
-import {AppHeaderStyle} from "../AppModuleImports";
+import { AppHeaderStyle } from "../AppModuleImports";
+import { useTranslation } from 'react-i18next';
+import { AwaitHandling } from '../../../../Services/ServicesImports';
+import SampleService from '../../../../Api/RestApi/ApiServices/SampleService';
 
 function AppHeader() {
+    const [t] = useTranslation();
+    const SampleServiceInstance = SampleService.getInstance();
+
+    const testApiRequest = async () => {
+        const [result, error] = await AwaitHandling(SampleServiceInstance.sampleCall());
+        if (error) return;
+        console.log(result.data);
+    };
+
     return (
         <header className="App-header">
             <img src={Logo} className="App-logo" alt="logo" />
@@ -15,8 +27,9 @@ function AppHeader() {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                Learn React
+                {t("sample")}
             </a>
+            <button onClick={testApiRequest}>Test Api call</button>
         </header>
     )
 }

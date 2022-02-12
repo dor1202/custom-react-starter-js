@@ -4,6 +4,8 @@ import './index.css';
 import { App } from './Pages/PagesImports'
 import reportWebVitals from './reportWebVitals';
 
+import './Localization/i18n';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
