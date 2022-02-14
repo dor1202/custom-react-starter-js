@@ -22,7 +22,7 @@ let removeBinCommand = '';
 if(process.platform == 'win32'){
     // windows
     removeGitCommand = `cd ${repoName} && rmdir ".git" /s /q`;
-    removeBinCommand = `rd -r ${repoName}/bin`;
+    removeBinCommand = `cd ${repoName} && rmdir "bin" /s /q`;
 }
 else{
     // linux
