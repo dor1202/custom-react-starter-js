@@ -15,16 +15,18 @@ const runCommand = command => {
 
 const repoName = process.argv[2];
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/dor1202/custom-react-starter-js ${repoName}`;
-const removeGitCommand = `cd ${repoName} && rm -rf .git`;
+let removeGitCommand = '';
 const installDepsCommand = `cd ${repoName} && npm install`;
 
 let removeBinCommand = '';
 if(process.platform == 'win32'){
     // windows
+    removeGitCommand = `cd ${repoName} && del .git`;
     removeBinCommand = `rd -r ${repoName}/bin`;
 }
 else{
     // linux
+    removeGitCommand = `cd ${repoName} && rm -rf .git`;
     removeBinCommand = `rm -r ${repoName}/bin`;
 }
 
