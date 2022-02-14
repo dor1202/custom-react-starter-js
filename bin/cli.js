@@ -16,9 +16,9 @@ const runCommand = command => {
 const repoName = process.argv[2];
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/dor1202/custom-react-starter-js ${repoName}`;
 let removeGitCommand = '';
+let removeBinCommand = '';
 const installDepsCommand = `cd ${repoName} && npm install`;
 
-let removeBinCommand = '';
 if(process.platform == 'win32'){
     // windows
     removeGitCommand = `cd ${repoName} && rmdir ".git" /s /q`;
@@ -39,12 +39,12 @@ console.log(`Removing git from ${repoName}`);
 const removeGit = runCommand(removeGitCommand);
 if(!removeGit)process.exit(-1);
 
-console.log(`Installing dependencies for ${repoName}`);
-const installedDeps = runCommand(installDepsCommand);
-if(!installedDeps)process.exit(-1);
-
 console.log(`Removing bin folder from ${repoName}`);
 const removeBin = runCommand(removeBinCommand);
 if(!removeBin)process.exit(-1);
+
+console.log(`Installing dependencies for ${repoName}`);
+const installedDeps = runCommand(installDepsCommand);
+if(!installedDeps)process.exit(-1);
 
 console.log(`Congrats! You'r ready to start coding`);
