@@ -21,7 +21,7 @@ const installDepsCommand = `cd ${repoName} && npm install`;
 let removeBinCommand = '';
 if(process.platform == 'win32'){
     // windows
-    removeGitCommand = `cd ${repoName} && del .git`;
+    removeGitCommand = `cd ${repoName} && rmdir ".git" /s /q`;
     removeBinCommand = `rd -r ${repoName}/bin`;
 }
 else{
